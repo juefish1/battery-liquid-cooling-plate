@@ -1,0 +1,21 @@
+# Workbench IronPython 2026 R1. Dedicated copies are prepared by PowerShell.
+import os
+root = os.environ["COLDPLATE_RUN_DIR"]
+for level, scale in (("coarse", 1.25), ("fine", 0.8)):
+    project = root + "/battery_coldplate_step12_" + level + ".wbpj"
+    report = root + "/step12_" + level + "_meshing.txt"
+    Open(FilePath=project)
+    mesh = GetAllSystems()[0].GetContainer(ComponentName="Mesh")
+    mesh.Edit(Interactive=False)
+    with open(root + "/step12a_mesh_family_v261.py", "r") as source:
+        command = "LEVEL = %r\nSCALE = %r\n" % (level, scale) + source.read()
+    mesh.SendCommand(Command=command, Language="Python")
+    if not os.path.isfile(report):
+        mesh.Exit(SaveDatabase=False)
+        raise RuntimeError("No mesh report: " + level)
+    with open(report, "r") as stream:
+        success = stream.read().rstrip().endswith("SUCCESS")
+    mesh.Exit(SaveDatabase=success)
+    if not success:
+        raise RuntimeError("Mesh generation failed, see " + report)
+    Save()

@@ -1,0 +1,84 @@
+{
+  "geometry": {
+    "array_xy": [
+      6,
+      2
+    ],
+    "cell_xyz_mm": [
+      27,
+      91,
+      148
+    ],
+    "gap_xy_mm": [
+      2,
+      2
+    ],
+    "plate_xyz_mm": [
+      192,
+      204,
+      10
+    ],
+    "floor_channel_lid_mm": [
+      3,
+      4,
+      3
+    ],
+    "channel_width_height_mm": [
+      8,
+      4
+    ],
+    "straight_legs": 9,
+    "leg_pitch_mm": 20,
+    "bend_centerline_radius_mm": 10
+  },
+  "boundary": {
+    "inlet_mass_flow_kg_s": 0.06,
+    "inlet_temperature_K": 298.15,
+    "inlet_turbulence_intensity_fraction": 0.05,
+    "hydraulic_diameter_m": 0.005333333333333333,
+    "outlet_gauge_pressure_Pa": 0,
+    "outlet_backflow_temperature_K": 298.15,
+    "operating_pressure_Pa": 101325,
+    "solid_fluid_wall": "stationary no-slip and thermally coupled",
+    "cell_to_lid": "ideal thermal contact",
+    "external_wall": "adiabatic",
+    "heat_per_cell_W": 20,
+    "heat_total_W": 240
+  },
+  "materials": {
+    "water": {
+      "rho_kg_m3": 997.047,
+      "cp_J_kg_K": 4181.446,
+      "k_W_m_K": 0.607198,
+      "mu_Pa_s": 0.000889997
+    },
+    "aluminum": {
+      "rho_kg_m3": 2719,
+      "cp_J_kg_K": 871,
+      "k_W_m_K": 202.4
+    },
+    "equivalent_cell": {
+      "rho_kg_m3": 2300,
+      "cp_J_kg_K": 1072,
+      "k_W_m_K": 8.007155
+    }
+  },
+  "solver": {
+    "release": "2026 R1",
+    "type": "3D steady double-precision pressure-based",
+    "turbulence": "k-omega SST",
+    "initialization": "hybrid",
+    "coupling": "SIMPLE",
+    "gradient": "least-squares cell-based",
+    "warmup_iterations": 50,
+    "final_discretization": "second order",
+    "convergence_acceleration": "local pseudo-time"
+  },
+  "mesh_pair_limits": {
+    "Tmax_C": 0.2,
+    "Tmin_C": 0.2,
+    "deltaT_K": 0.2,
+    "Tout_C": 0.02,
+    "deltaP_relative_percent": 2
+  }
+}

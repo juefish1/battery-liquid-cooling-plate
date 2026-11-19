@@ -1,0 +1,9 @@
+﻿case,state,reason
+flow_020_sst,excluded,Convergence checks not passed
+flow_040_sst,excluded,Convergence checks not passed
+flow_060_sst,accepted,Convergence and SI/physics checks passed
+flow_080_sst,accepted,Convergence and SI/physics checks passed
+flow_100_sst,accepted,Convergence and SI/physics checks passed
+flow_020_laminar,excluded,Convergence checks not passed
+heat_010_sst,accepted,Convergence and SI/physics checks passed
+heat_030_sst,accepted,Convergence and SI/physics checks passed

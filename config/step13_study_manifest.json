@@ -1,0 +1,99 @@
+{
+  "baseline_case": "step12_fine_final.cas.h5",
+  "cases": [
+    {
+      "id": "flow_020_sst",
+      "mass_flow_kg_s": 0.02,
+      "power_per_cell_W": 20,
+      "model": "sst",
+      "study": "flow",
+      "Re_inlet": 3745.331927836104,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    },
+    {
+      "id": "flow_040_sst",
+      "mass_flow_kg_s": 0.04,
+      "power_per_cell_W": 20,
+      "model": "sst",
+      "study": "flow",
+      "Re_inlet": 7490.663855672208,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    },
+    {
+      "id": "flow_060_sst",
+      "mass_flow_kg_s": 0.06,
+      "power_per_cell_W": 20,
+      "model": "sst",
+      "study": "flow",
+      "Re_inlet": 11235.995783508311,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    },
+    {
+      "id": "flow_080_sst",
+      "mass_flow_kg_s": 0.08,
+      "power_per_cell_W": 20,
+      "model": "sst",
+      "study": "flow",
+      "Re_inlet": 14981.327711344416,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    },
+    {
+      "id": "flow_100_sst",
+      "mass_flow_kg_s": 0.1,
+      "power_per_cell_W": 20,
+      "model": "sst",
+      "study": "flow",
+      "Re_inlet": 18726.65963918052,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    },
+    {
+      "id": "flow_020_laminar",
+      "mass_flow_kg_s": 0.02,
+      "power_per_cell_W": 20,
+      "model": "laminar",
+      "study": "model_sensitivity",
+      "Re_inlet": 3745.331927836104,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    },
+    {
+      "id": "heat_010_sst",
+      "mass_flow_kg_s": 0.06,
+      "power_per_cell_W": 10.0,
+      "model": "sst",
+      "study": "heat",
+      "Re_inlet": 11235.995783508311,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    },
+    {
+      "id": "heat_030_sst",
+      "mass_flow_kg_s": 0.06,
+      "power_per_cell_W": 30.0,
+      "model": "sst",
+      "study": "heat",
+      "Re_inlet": 11235.995783508311,
+      "mesh": "fine",
+      "pressure_mesh_independence_passed": false,
+      "geometry": "serpentine_8x4mm_9legs"
+    }
+  ],
+  "heat_values_W": [
+    10.0,
+    20.0,
+    30.0
+  ],
+  "status": "exploratory: pressure mesh sensitivity unresolved"
+}

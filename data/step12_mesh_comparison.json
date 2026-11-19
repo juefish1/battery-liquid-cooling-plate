@@ -1,0 +1,87 @@
+{
+  "meshes": [
+    {
+      "mesh": "coarse",
+      "cells": 701908,
+      "water_cells": 399006,
+      "minimum_orthogonal_quality": 0.027105,
+      "iterations": 750,
+      "Tmax_C": 101.9297316256272,
+      "Tmin_C": 26.738412699689547,
+      "deltaT_K": 75.19131892593765,
+      "Tout_C": 25.956609600563013,
+      "deltaP_kPa": 23.25108870568182,
+      "mass_imbalance_percent": 3.041854091528905e-05,
+      "energy_imbalance_percent": 0.0002585820110330891
+    },
+    {
+      "mesh": "medium",
+      "cells": 1436439,
+      "water_cells": 808657,
+      "minimum_orthogonal_quality": 0.05355,
+      "iterations": 551,
+      "Tmax_C": 101.9005365717058,
+      "Tmin_C": 26.53635928826634,
+      "deltaT_K": 75.36417728343946,
+      "Tout_C": 25.956583841517613,
+      "deltaP_kPa": 24.30951009850921,
+      "mass_imbalance_percent": 6.464510750777329e-05,
+      "energy_imbalance_percent": 0.002468394475675003
+    },
+    {
+      "mesh": "fine",
+      "cells": 2902379,
+      "water_cells": 1658829,
+      "minimum_orthogonal_quality": 0.0588838,
+      "iterations": 1150,
+      "Tmax_C": 101.9055377856954,
+      "Tmin_C": 26.363850777541813,
+      "deltaT_K": 75.54168700815359,
+      "Tout_C": 25.9565995616191,
+      "deltaP_kPa": 22.46439733533191,
+      "mass_imbalance_percent": 0.00017714876909130645,
+      "energy_imbalance_percent": 0.0009375793976929004
+    }
+  ],
+  "fine_medium_checks": {
+    "Tmax_diff_le_0p2K": true,
+    "Tmin_diff_le_0p2K": true,
+    "deltaT_diff_le_0p2K": true,
+    "Tout_diff_le_0p02K": true,
+    "deltaP_diff_le_2percent": false
+  },
+  "trends": {
+    "Tmax_C": {
+      "coarse_to_medium": -0.02919505392139854,
+      "medium_to_fine": 0.005001213989601183,
+      "monotonic": false,
+      "change_reduces": true
+    },
+    "Tmin_C": {
+      "coarse_to_medium": -0.20205341142320776,
+      "medium_to_fine": -0.17250851072452633,
+      "monotonic": true,
+      "change_reduces": true
+    },
+    "deltaT_K": {
+      "coarse_to_medium": 0.17285835750180922,
+      "medium_to_fine": 0.17750972471412751,
+      "monotonic": true,
+      "change_reduces": false
+    },
+    "Tout_C": {
+      "coarse_to_medium": -2.575904539980911e-05,
+      "medium_to_fine": 1.5720101487204374e-05,
+      "monotonic": false,
+      "change_reduces": true
+    },
+    "deltaP_kPa": {
+      "coarse_to_medium": 1.0584213928273911,
+      "medium_to_fine": -1.8451127631773012,
+      "monotonic": false,
+      "change_reduces": false
+    }
+  },
+  "all_pairwise_checks_pass": false,
+  "formal_GCI_computed": false
+}

@@ -1,0 +1,3 @@
+# Python 3.10+ for scripts/analyze_results.py.
+# No third-party Python packages required. Ansys journals use Ansys 2026 R1.
+

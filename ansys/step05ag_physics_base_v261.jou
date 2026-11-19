@@ -1,0 +1,17 @@
+; Fluent 2026 R1 SOLUTION MODE. Step 5 physical model baseline.
+; Energy prompts: viscous dissipation=no; pressure work=no; kinetic energy=no;
+; inlet diffusion=yes (Fluent default).
+/file/set-tui-version "26.1"
+/file/confirm-overwrite? no
+/file/start-transcript "step05ag_physics_base_v261.trn"
+/file/read-case "step05z_cht_export.msh"
+/define/models/steady?
+/define/models/energy yes
+no
+no
+no
+yes
+/define/models/viscous/kw-sst? yes
+/file/write-case "step05_physics_base_v261.cas.h5"
+/file/stop-transcript
+/exit yes
